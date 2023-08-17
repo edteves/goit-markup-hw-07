@@ -50,10 +50,15 @@ a.link {
 .container {
 	padding-left: 15px;
 	padding-right: 15px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 
 	@media screen and (min-width: 428px) {
 		width: 428px;
+	}
+
+	@media screen and (min-width: 768px) {
+		width: 768px;
 	}
 
 	@media screen and (min-width: 1158px) {
@@ -92,6 +97,10 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	@media screen and (max-width: 767px) {
+		height: 70px;
+	}
 }
 
 .logo-navigation {
@@ -131,6 +140,7 @@ body {
 
 	@media screen and (min-width: 768px) {
 		display: flex;
+		justify-content: center;
 		align-items: center;
 		gap: 40px;
 	}
@@ -143,12 +153,6 @@ body {
 	display: block;
 	padding: 24px 0;
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-width: 767px) {
-	.menu-items:last-child {
-		margin-right: 122px;
-	}
 }
 
 .menu-link:hover,
@@ -239,6 +243,10 @@ a.menu-link.active-link::after {
 }
 
 .hero-section {
+	text-align: center;
+	padding-top: 188px;
+	padding-bottom: 188px;
+
 	background: var(--navyblue, #2e2f42);
 	background-image: linear-gradient(
 			to right,
@@ -267,14 +275,6 @@ a.menu-link.active-link::after {
 			),
 			url(../images/people-office.jpg);
 	}
-}
-
-.hero-section {
-	display: flex;
-	align-items: center;
-	text-align: center;
-	padding-top: 188px;
-	padding-bottom: 188px;
 }
 
 .hero-title {
@@ -398,7 +398,7 @@ a.menu-link.active-link::after {
 
 .what-we-do-list {
 	display: flex;
-	/* gap: 24px; */
+	gap: 24px;
 	justify-content: center;
 }
 /* End of What are we doing section */
