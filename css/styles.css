@@ -50,13 +50,18 @@ a.link {
 .container {
 	padding: 0 15px;
 	margin: 0 auto;
+	overflow: hidden;
+
+	@media screen and (min-width: 428px) {
+		max-width: 428px;
+	}
 
 	@media screen and (min-width: 768px) {
-		width: 768px;
+		max-width: 768px;
 	}
 
 	@media screen and (min-width: 1158px) {
-		width: 1158px;
+		max-width: 1158px;
 	}
 }
 
@@ -85,6 +90,7 @@ body {
 }
 
 .menu-container {
+	display: flex;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -113,9 +119,21 @@ body {
 
 .menu-container .menu-toggle {
 	position: absolute;
-	top: 16px;
-	right: 16px;
-	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 24px;
+	right: 24px;
+	width: 24px;
+	height: 24px;
+	color: var(--navyblue);
+	border-radius: 50%;
+	background-color: var(--cornflower);
+	border-color: rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition-property: background-color, border-color, color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-contact-footer-list {
@@ -349,13 +367,12 @@ a.menu-link.active-link::after {
 			rgba(46, 47, 66, 0.7),
 			rgba(46, 47, 66, 0.7)
 		),
-		url(../images/people-office.jpg);
+		url(../images/people-office-m.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 
 	@media (min-device-pixel-ratio: 2),
-		(-webkit-min-device-pixel-ratio: 2),
 		(min-resolution: 192dpi),
 		(min-resolution: 2dppx) {
 		background-image: linear-gradient(
@@ -363,13 +380,73 @@ a.menu-link.active-link::after {
 				rgba(46, 47, 66, 0.7),
 				rgba(46, 47, 66, 0.7)
 			),
-			url(../images/people-office.jpg);
+			url(../images/people-office-m@2x.jpg);
 		background-image: linear-gradient(
 				to right,
 				rgba(46, 47, 66, 0.7),
 				rgba(46, 47, 66, 0.7)
 			),
-			url(../images/people-office.jpg);
+			url(../images/people-office-m@2x.jpg);
+	}
+
+	/* tablet */
+	@media screen and (min-width: 768px) {
+		background-image: linear-gradient(
+				to right,
+				rgba(46, 47, 66, 0.7),
+				rgba(46, 47, 66, 0.7)
+			),
+			url(../images/people-office-t.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		@media (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: linear-gradient(
+					to right,
+					rgba(46, 47, 66, 0.7),
+					rgba(46, 47, 66, 0.7)
+				),
+				url(../images/people-office-t@2x.jpg);
+			background-image: linear-gradient(
+					to right,
+					rgba(46, 47, 66, 0.7),
+					rgba(46, 47, 66, 0.7)
+				),
+				url(../images/people-office-t@2x.jpg);
+		}
+	}
+
+	/* desktop */
+	@media screen and (min-width: 1158px) {
+		background-image: linear-gradient(
+				to right,
+				rgba(46, 47, 66, 0.7),
+				rgba(46, 47, 66, 0.7)
+			),
+			url(../images/people-office-d.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		@media (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: linear-gradient(
+					to right,
+					rgba(46, 47, 66, 0.7),
+					rgba(46, 47, 66, 0.7)
+				),
+				url(../images/people-office-d@2x.jpg);
+			background-image: linear-gradient(
+					to right,
+					rgba(46, 47, 66, 0.7),
+					rgba(46, 47, 66, 0.7)
+				),
+				url(../images/people-office-d@2x.jpg);
+		}
 	}
 }
 
@@ -536,13 +613,17 @@ a.menu-link.active-link::after {
 		width: calc(100% / 2 - 35px);
 	}
 
-	/* @media screen and (max-width: 767px) {
+	@media screen and (max-width: 767px) {
 		margin-bottom: 72px;
 	}
 
 	@media screen and (max-width: 1157px) {
 		margin-bottom: 64px;
-	} */
+	}
+
+	@media screen and (min-width: 1158px) {
+		width: calc(100% / 4 - 40px);
+	}
 }
 
 .team-members-name {
@@ -994,14 +1075,19 @@ a.menu-link.active-link::after {
 	align-items: normal;
 	top: 50%;
 	left: 50%;
-	width: 408px;
-	min-height: 584px;
+	min-width: 428px;
+	height: 100vh;
 	padding: 72px 24px 24px 24px;
 	border-radius: 4px;
 	background-color: var(--dairy);
+	overflow: hidden;
 
 	transform: translate(-50%, -50%) scale(1);
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	@media screen and (min-width: 428px) {
+		height: auto;
+	}
 }
 
 .modal-close {
