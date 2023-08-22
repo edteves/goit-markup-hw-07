@@ -18,40 +18,51 @@
 
 	<body>
 		<header class="header">
-			<div class="container header-container">
-				<nav class="logo-navigation">
-					<a href="./index.html" class="header-logo">
-						<span class="web-logo">WEB</span
-						><span class="studio-logo">STUDIO</span>
-					</a>
+			<div class="container">
+				<div class="header-container">
+					<nav class="logo-navigation">
+						<a href="./index.html" class="header-logo">
+							<span class="web-logo">WEB</span
+							><span class="studio-logo">STUDIO</span>
+						</a>
 
-					<ul class="menu-navigation list">
-						<li class="menu-items">
-							<a href="./index.html" class="menu-link link">Studio</a>
-						</li>
-						<li class="menu-items">
-							<a href="./portfolio.html" class="menu-link link active-link"
-								>Portfolio</a
+						<ul class="menu-navigation list">
+							<li class="menu-items">
+								<a href="./index.html" class="menu-link link">Studio</a>
+							</li>
+							<li class="menu-items">
+								<a href="./portfolio.html" class="menu-link link active-link"
+									>Portfolio</a
+								>
+							</li>
+							<li class="menu-items">
+								<a href="#" class="menu-link link">Contacts</a>
+							</li>
+						</ul>
+					</nav>
+
+					<ul class="menu-right-navigation list">
+						<li>
+							<a href="mailto:info@devstudio.com" class="menu-right-item link"
+								>info@devstudio.com</a
 							>
 						</li>
-						<li class="menu-items">
-							<a href="#" class="menu-link link">Contacts</a>
+						<li>
+							<a href="tel:+11(000)111-11-11" class="menu-right-item link"
+								>+11(000)111-11-11</a
+							>
 						</li>
 					</ul>
-				</nav>
-
-				<ul class="menu-right-navigation list">
-					<li>
-						<a href="mailto:info@devstudio.com" class="menu-right-item link"
-							>info@devstudio.com</a
-						>
-					</li>
-					<li>
-						<a href="tel:+11(000)111-11-11" class="menu-right-item link"
-							>+11(000)111-11-11</a
-						>
-					</li>
-				</ul>
+					<button
+						class="menu-toggle js-open-menu"
+						aria-expanded="false"
+						aria-controls="mobile-menu"
+					>
+						<svg width="32" height="22" class="hamburger-menu">
+							<use href="./images/icons.svg#icon-hamburger-open"></use>
+						</svg>
+					</button>
+				</div>
 			</div>
 		</header>
 
@@ -254,11 +265,7 @@
 						<li class="card-item">
 							<a href="#" class="link">
 								<div class="portfolio-overlay">
-									<img
-										src="./images/fresh-coffee.jpg"
-										alt="Fresh Coffee"
-										width="360"
-									/>
+									<img src="./images/fresh-coffee.jpg" alt="Fresh Coffee" />
 									<p class="portfolio-overlay-text">
 										14 Stylish and User-Friendly App Design Concepts · Task
 										Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -276,13 +283,15 @@
 			</section>
 		</main>
 
-		<footer class="footer-section section">
-			<div class="footer-container container">
-				<div class="wrapper-footer-1">
-					<a href="./index.html" class="logo-footer">
-						<span class="web-logo-footer">WEB</span
-						><span class="studio-logo-footer">STUDIO</span>
-					</a>
+		<footer class="footer section">
+			<div class="container row">
+				<div class="footer-container">
+					<div class="logo-wrapper">
+						<a href="./index.html">
+							<span class="web-logo-footer">WEB</span
+							><span class="studio-logo-footer">STUDIO</span>
+						</a>
+					</div>
 
 					<p class="footer-text">
 						Increase the flow of customers and<br />
@@ -290,7 +299,8 @@
 						marketing & growth solutions.
 					</p>
 				</div>
-				<div class="wrapper-footer-2">
+
+				<div class="footer-container footer-social-links">
 					<p class="footer-social-media-text">Social Media</p>
 					<ul class="footer-icon-list">
 						<li class="footer-icon-item">
@@ -300,7 +310,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<svg width="24" height="24" class="footer-icon">
+								<svg width="22" height="22" class="footer-icon">
 									<use href="./images/icons.svg#icon-instagram"></use></svg
 							></a>
 						</li>
@@ -311,7 +321,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<svg width="24" height="24" class="footer-icon">
+								<svg width="22" height="22" class="footer-icon">
 									<use href="./images/icons.svg#icon-twitter"></use></svg
 							></a>
 						</li>
@@ -322,7 +332,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<svg width="24" height="24" class="footer-icon">
+								<svg width="22" height="22" class="footer-icon">
 									<use href="./images/icons.svg#icon-facebook"></use></svg
 							></a>
 						</li>
@@ -333,34 +343,186 @@
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<svg width="24" height="24" class="footer-icon">
+								<svg width="22" height="22" class="footer-icon">
 									<use href="./images/icons.svg#icon-linkedin"></use></svg
 							></a>
 						</li>
 					</ul>
 				</div>
 
-				<div class="wrapper-footer-3">
+				<div class="footer-container">
 					<p class="subscribe-text">Subscribe</p>
-					<div class="subscribe-and-button">
-						<label class="subscribe-label">
-							<input
-								class="email-subscribe"
-								type="text"
-								name="firstName"
-								placeholder="Email"
-							/>
-						</label>
+					<div class="subscribe-wrapper">
+						<form class="subscribe-form">
+							<label class="subscribe-input">
+								<input
+									class="email-subscribe"
+									type="email"
+									name="firstName"
+									placeholder="Email"
+								/>
+							</label>
 
-						<button class="subscribe-button">
-							Subscribe
-							<svg class="subscribe-icon" width="24" height="24">
-								<use href="./images/icons.svg#subscribe-icon"></use>
-							</svg>
-						</button>
+							<button class="subscribe-button">
+								Subscribe
+								<svg class="subscribe-icon" width="24" height="24">
+									<use href="./images/icons.svg#subscribe-icon"></use>
+								</svg>
+							</button>
+						</form>
 					</div>
 				</div>
 			</div>
 		</footer>
+
+		<!-- JS -->
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<button class="modal-close" type="button" data-modal-close>
+					<svg class="modal-close-icon" width="8" height="8">
+						<use href="./images/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<h3 class="form-description">
+					Leave your contacts and we will call you back
+				</h3>
+				<form class="form" autocomplete="on" novalidate>
+					<label class="label">
+						<span class="label-text">Name</span>
+						<svg class="modal-icon" width="18" height="18">
+							<use href="./images/icons.svg#name-modal"></use>
+						</svg>
+						<input type="text" name="name" class="input" autofocus />
+					</label>
+					<label class="label">
+						<span class="label-text">Phone</span>
+
+						<svg class="modal-icon" width="18" height="24">
+							<use href="./images/icons.svg#phone-modal"></use>
+						</svg>
+						<input type="text" name="phone" class="input" />
+					</label>
+					<label class="label">
+						<span class="label-text">Email</span>
+						<svg class="modal-icon" width="18" height="24">
+							<use href="./images/icons.svg#email-modal"></use>
+						</svg>
+						<input type="email" name="email" class="input" />
+					</label>
+					<label class="label">
+						<span class="label-text">Comment</span>
+						<textarea class="input-comment" placeholder="Text Input"></textarea>
+					</label>
+
+					<label class="policy">
+						I accept the terms and conditions of the&nbsp;
+						<span class="policy-underline">Privacy Policy</span>
+						<input type="checkbox" class="checkbox-default" />
+
+						<svg class="icon-checkbox-check" width="16" height="16">
+							<use href="./images/icons.svg#icon-checkbox-check"></use>
+						</svg>
+					</label>
+
+					<button class="modal-send" type="submit">Send</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="menu-container js-menu-container" id="mobile-menu">
+			<button class="menu-toggle js-close-menu burger-close-icon">
+				<svg class="modal-close-icon" width="24" height="24">
+					<use href="./images/icons.svg#icon-hamburger-close"></use>
+				</svg>
+			</button>
+			<div class="mobile-menu-content">
+				<ul class="mobile-menu">
+					<li>
+						<a href="./index.html" class="mobile-menu-item active-link"
+							>Studio</a
+						>
+					</li>
+					<li>
+						<a href="./portfolio.html" class="mobile-menu-item">Portfolio</a>
+					</li>
+					<li><a href="" class="mobile-menu-item">Contacts</a></li>
+				</ul>
+
+				<div class="mobile-contact-footer">
+					<ul class="mobile-contact-footer-list">
+						<li>
+							<a href="tel:+11(000)111-11-11" class="mobile-tel-footer-item"
+								>+11(000)111-11-11</a
+							>
+						</li>
+						<li>
+							<a
+								href="mailto:info@devstudio.com"
+								class="mobile-email-footer-item"
+								>info@devstudio.com</a
+							>
+						</li>
+					</ul>
+
+					<ul class="mobile-icons-footer">
+						<li class="our-team-icon-item">
+							<a
+								class="our-team-icon-link"
+								href="https://intagram.com"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<svg width="16" height="40" class="our-team-icon">
+									<use href="./images/icons.svg#icon-instagram"></use></svg
+							></a>
+						</li>
+						<li class="our-team-icon-item">
+							<a
+								class="our-team-icon-link"
+								href="https://twitter.com"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<svg width="16" height="16" class="our-team-icon">
+									<use href="./images/icons.svg#icon-twitter"></use></svg
+							></a>
+						</li>
+						<li class="our-team-icon-item">
+							<a
+								class="our-team-icon-link"
+								href="https://facebook.com"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<svg width="16" height="16" class="our-team-icon">
+									<use href="./images/icons.svg#icon-facebook"></use></svg
+							></a>
+						</li>
+						<li class="our-team-icon-item">
+							<a
+								class="our-team-icon-link"
+								href="https://linkedin.com"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<svg width="16" height="16" class="our-team-icon">
+									<use href="./images/icons.svg#icon-linkedin"></use></svg
+							></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Modal Script -->
+		<script src="./js/modal.js"></script>
+		<script defer src="js/mobile-menu.js"></script>
 	</body>
 </html>
