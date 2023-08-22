@@ -140,6 +140,11 @@ body {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu-container .menu-toggle:hover,
+.menu-container .menu-toggle:focus {
+	background-color: var(--ocean);
+	color: var(--white);
+}
 .mobile-contact-footer-list {
 	display: inline-flex;
 	flex-direction: column;
